@@ -14,82 +14,89 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
-        
       ),
       home: ContentScreen(),
     );
   }
 }
 
-class ContentScreen extends StatelessWidget{
+class ContentScreen extends StatelessWidget {
   const ContentScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
-      
-     
       body: SafeArea(
-        
         child: SingleChildScrollView(
-          
           child: Column(
-          children: [
-            Padding(padding: const EdgeInsetsGeometry.all(10),
-              child: Text(('Liburan Keluarga '),
-              textAlign: TextAlign.left,
-
-              ),
-              
-              ),
-               Row(
-               children: [
-                
-                 Padding(padding: const EdgeInsetsGeometry.all(16),
-                 
-                  child: Text(('Taman Bunga Celosia'),
-
-                  textAlign: TextAlign.justify,
-                  ),
-                 ),
-               ],
-             ),
-            Stack(
             children: [
-              Padding(padding: const EdgeInsets.symmetric(
-                horizontal: 8,
+              Padding(
+                padding: const EdgeInsetsGeometry.all(10),
+                child: Text(('Liburan Keluarga '), textAlign: TextAlign.left),
               ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.network(
-                  'https://www.bola.com/ragam/read/4983546/40-kata-kata-keren-tentang-bunga-keindahan-dari-alam',
-                  width: double.infinity,
-                  height: 300,
-                  fit: BoxFit.cover,),
-                  
-              ),
-              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsetsGeometry.all(16),
 
-            ],
-            
-              
-            ), 
-             Row(
-               children: [
-                 Padding(padding: const EdgeInsetsGeometry.all(16),
-                  child: Text(('Taman Bunga '),
+                    child: Text(
+                      ('Taman Bunga Celosia'),
 
-                  textAlign: TextAlign.justify,
+                      textAlign: TextAlign.justify,
+                    ),
                   ),
-                 ),
-               ],
-             ),
-          ],
+                ],
+              ),
+              Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        'asset/istockphoto-2171469159-612x612.jpg',
+                        width: double.infinity,
+                        height: 300,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsetsGeometry.all(16)
+                    ,
+                    child: Text(('Taman Bunga '), textAlign: TextAlign.justify),
+                    
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsetsGeometry.all(16),
+                    child: Text(
+                      ('Taman Bunga Menjadi Tempat Yang Sangat Menyenangkan untuk refersing dan untuk liburan'),
+
+                      textAlign: TextAlign.justify,
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsetsGeometry.all(16),
+                    child: Text(('Rencana Kunjungan '), textAlign: TextAlign.justify),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
-    ),
     );
   }
-
 }
