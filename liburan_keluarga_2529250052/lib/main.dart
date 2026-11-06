@@ -93,6 +93,15 @@ class ContentScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              Row(
+                children: [
+                  const Icon(
+                    Icons.airplane_ticket,
+                    color: Colors.amber,
+                  ),
+                  Text('Libuaran')
+                ],
+              )
             ],
           ),
         ),
